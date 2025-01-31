@@ -1,0 +1,32 @@
+body{
+    background-color: white;
+    margin: 10px;
+    
+
+}
+
+titulo{
+    
+    display: flex;
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+
+    
+}
+
+main{ 
+    
+    margin: 3% 0% 33% 0%;
+
+}
+
+footer{
+
+    padding: 1% 43%;
+    background-color: rgb(184, 209, 255);
+
+    }
