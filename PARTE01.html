@@ -24,6 +24,27 @@
                 <li><strong>Git Commit:</strong> Grava as alterações que você fez no repositorio clonado na sua máquina</li>
                 <li><strong> Git Pull:</strong> Puxa para o repositorio que esta na sua máquina, uma versão atualizada do repositorio que esta na nuvem e atualiza o seu repositorio</li>
                 <li><strong>Git Push:</strong> Envia para o repositorio na nuvem o commit que você fez.</li>
+                <br><br>
+
+                <li><strong>git config --global user.name "xxxxx":</strong> Aqui setamos o username do git que iremos usar mesmo username do github</li>
+                <li><strong>git config --global user.email xxxxx:</strong> Aqui igual ao username tem que ser o mesmo email que usamos no github</li>
+                <li><strong>git config user.name: </strong> Aqui verificamos o user que esta configurado no global</li>
+                <li><strong>git config user.email: </strong> Aqui verificamos o email que esta configurado no global</li>
+                <li><strong>git config --global --list: </strong> Mostra todas as configurações setadas no seu git</li>
+                <li><strong>git config --global credential.helper store:</strong> No proximo clone que você realizar de um repositorio, o git salvara a sua credencial login e senha</li>
+                <li><strong>git config --global credential.helper cache:</strong>No proximo clone que você realizar de um repositorio, o git salvara temporariamente a sua credencial login e senha</li>
+                <li><strong>git config --global credential.helper</strong> Mostra qual o tipo de aramazenamento esta sendo usado (cache ou store) </li>
+                <blockquote> Em casos onde o codigo acima mostre como store e você queira mudar pra cache basta usar o codigo do cache(git config --global credential.helper cache)</blockquote>
+                <br><br>
+
+                <li><strong>git config --global --show-origin credential.helper:</strong> Este comando mostra o caminho da máquina onde esta salvo o arquivo de senha utilizado pelo git.</li>
+                <li><strong> cat .gitconfig:</strong> Basicamente mostra as configurações do seu git como username, email, helper(credential)</li>
+                <li><strong>cat .git-credentials</strong> Pega o arquivo se senha e login do helper e mostra o login e senha( no caso token )</li>
+                <br><br>
+
+                <li><strong>Ctrl + L :</strong> Limpar todo o terminal</li>
+                <li><strong>Ctrl + 🔼</strong> Copia o ultimo comando digitado acima.</li>
+                <li><strong></strong></li>
             </ul> 
 
         </div>
