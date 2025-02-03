@@ -13,12 +13,20 @@
     <titulo>
         <h2>Principio de Desenvovimento de Software Colaborativo</h2>
     </titulo>
-  
+
+        <div class="atalhos">
+            
+            <a href="#comandos"> Comandos simples </a>
+            <a href="#Chaves_ssh"> Chaves SSH </a>
+        
+        </div>
+        
     <main>
 
+        
         <!-- começo01 -->
         <div> 
-            <h3>Comandos simples em Git</h3>
+            <h3 id="Comandos">Comandos simples em Git</h3>
             <ul>
                 <li><strong>Git Clone:</strong> Clona um repositorio que esta na nuvem para a sua máquina</li>
                 <li><strong>Git Commit:</strong> Grava as alterações que você fez no repositorio clonado na sua máquina</li>
@@ -49,6 +57,49 @@
 
         </div>
 
+        
+        <!-- meio 02 -->
+        <div>
+            <h3 id="Chaves_ssh">Autenticando chave via SSH</h3>
+
+            <p> &emsp; Para verificar se ha alguma chave SSH cadastrada no seu git digite no gitbash o seguinte codigo.</p>
+            
+            <blockquote> <mark>ls -al ~/.ssh</mark></blockquote>
+
+            <p> &emsp;Esse codigo verifica se há chaves existentes. <br> &emsp;Agora vamos gerar uma nova chave.</p>
+
+            <blockquote> <mark>ssh-keygen -t ed25519 -C "xxx email github xxx"</mark></blockquote>
+
+            <p> &emsp; Quando você apertar enter ele vai pedir um local de salvamento, porem se vc apertar enter novamente ele vai salvar no local padrão. </p>
+
+            <p> &emsp; Apos isso ele irá pedir uma passphrase, esse passphrase serve como uma senha, só que em vez de palavras é uma frase.</p>
+
+            <p> &emsp; Apos isso vamos adicionar na nossa chave privada ssh ao nosso agent para torna-lá mais segura</p>
+
+            <blockquote> <mark>eval "$(ssh-agent -s)"</mark></blockquote>
+            <br>
+            <blockquote> <mark>ssh-add ~/.ssh/id_ed25519</mark></blockquote>
+
+            <p> &emsp; Quando rodar os dois comandos acima de forma independentes 1 do outro, ele irá pedir a passphrase. Agora o proximo passo é adiconar a chave publica ao github <br>
+            para isso vá no github no seu repositorio e clique no seguinte caminho:</p>
+
+            <blockquote>foto do perfil>Settings>SSH and GPG keys>New SSH keys.</blockquote>
+
+            <p> &emsp; Quando você clicar nesse caminho ele vai pedir alguns dados; <br> &emsp;&emsp;
+            <strong>Titulo:</strong> Serve pra identificar a sua chave ssh <br> &emsp;&emsp;
+            <strong>tipo da chave:</strong> autentication key <br> &emsp;&emsp;
+            <strong>chave:</strong> Chave publica gerada no passo anterior  <br> <br>
+            &emsp; Para pegar essa chave digite os seguintes comandos:</p>
+
+            <blockquote> <mark>cd ~/.ssh</mark></blockquote>
+
+            <blockquote> <mark>ls</mark></blockquote>
+
+            <blockquote> <mark>cat id_ed25519.pub</mark></blockquote>
+
+            <p> &emsp; Após isso se ocorrer tudo certo irá mostrar a chave publica abaixo do comando.</p>
+
+        </div>
 
 
 

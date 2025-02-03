@@ -1,6 +1,6 @@
 body{
     background-color: white;
-    margin: 0px;
+    margin: 5px;
     
 
 }
@@ -20,7 +20,7 @@ titulo{
 
 main{ 
     
-    margin: 3% 0% 33% 0%;
+    margin: 3% 0% 5% 0%;
 
 }
 
@@ -30,3 +30,35 @@ footer{
     background-color: rgb(184, 209, 255);
 
     }
+
+
+.atalhos{
+
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-content: space-around;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+    
+    background-color: darkgrey;
+    border: 3px grey solid;
+
+    margin: 2% 0% 1% 0%;
+    padding: 5px;
+}
+
+.atalhos a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+    padding: 3px;
+
+}
+
+.atalhos a:hover{
+
+    background-color: rgb(67, 66, 131);
+}
