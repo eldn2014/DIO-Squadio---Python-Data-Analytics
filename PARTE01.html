@@ -18,6 +18,7 @@
             
             <a href="#comandos"> Comandos simples </a>
             <a href="#Chaves_ssh"> Chaves SSH </a>
+            <a href="#Criando_github">Criando um Novo Repositorio no Github</a>
         
         </div>
         
@@ -26,14 +27,20 @@
         
         <!-- começo01 -->
         <div> 
-            <h3 id="Comandos">Comandos simples em Git</h3>
+            <h3 id="Comandos">Comandos simples git e windows</h3>
             <ul>
-                <li><strong>Git Clone:</strong> Clona um repositorio que esta na nuvem para a sua máquina</li>
+                <li><strong>Git Clone url:</strong> Clona um repositorio que esta na nuvem para a sua máquina</li>
+                <li><strong>Git Clone url xpto:</strong> Clona um repositorio que esta na nuvem para a sua máquina dentro que uma pasta chamada xpto especificada no final do comando</li>
+                <li><strong>Git Clone url --branch xxx --single-branch:</strong> Clona um repositorio que esta na nuvem para a sua máquina, clando apenas a branch especifica.</li>
                 <li><strong>Git Commit:</strong> Grava as alterações que você fez no repositorio clonado na sua máquina</li>
-                <li><strong> Git Pull:</strong> Puxa para o repositorio que esta na sua máquina, uma versão atualizada do repositorio que esta na nuvem e atualiza o seu repositorio</li>
+                <li><strong>Git Pull:</strong> Puxa para o repositorio que esta na sua máquina, uma versão atualizada do repositorio que esta na nuvem e atualiza o seu repositorio</li>
                 <li><strong>Git Push:</strong> Envia para o repositorio na nuvem o commit que você fez.</li>
+                <li><strong>Git remote -v:</strong> Mostra se o diretorio é local ou remoto.</li>
+                <li><strong>Git remote add origin xx(url)xx:</strong>Vincula seu diretorio local ao remoto.</li>
                 <br><br>
 
+
+                <li><strong>git init</strong> quando setado dentro do uma pasta esse comando inicializa um repositorio com a pasta em questão</li>
                 <li><strong>git config --global user.name "xxxxx":</strong> Aqui setamos o username do git que iremos usar mesmo username do github</li>
                 <li><strong>git config --global user.email xxxxx:</strong> Aqui igual ao username tem que ser o mesmo email que usamos no github</li>
                 <li><strong>git config user.name: </strong> Aqui verificamos o user que esta configurado no global</li>
@@ -45,14 +52,21 @@
                 <blockquote> Em casos onde o codigo acima mostre como store e você queira mudar pra cache basta usar o codigo do cache(git config --global credential.helper cache)</blockquote>
                 <br><br>
 
+
+
                 <li><strong>git config --global --show-origin credential.helper:</strong> Este comando mostra o caminho da máquina onde esta salvo o arquivo de senha utilizado pelo git.</li>
                 <li><strong> cat .gitconfig:</strong> Basicamente mostra as configurações do seu git como username, email, helper(credential)</li>
                 <li><strong>cat .git-credentials</strong> Pega o arquivo se senha e login do helper e mostra o login e senha( no caso token )</li>
                 <br><br>
 
+
+
                 <li><strong>Ctrl + L :</strong> Limpar todo o terminal</li>
-                <li><strong>Ctrl + 🔼</strong> Copia o ultimo comando digitado acima.</li>
-                <li><strong></strong></li>
+                <li><strong>Ctrl + 🔼:</strong> Copia o ultimo comando digitado acima.</li>
+                <li><strong>mkdir xxxx:</strong> Cria uma pasta no do diretorio em que é setado.</li>
+                <li><strong>cd xxxxx/:</strong> o cd é usado pra navegação o xxx/ basta substituir pelo caminho da pasta desejada.</li>
+                <li><strong>ls:</strong> Lista os arquivos ou pastas dentro de um diretorio</li>
+                <li><strong>cd .. : </strong> este comando volta uma pasta.</li>
             </ul> 
 
         </div>
@@ -97,6 +111,22 @@
             <blockquote> <mark>cat id_ed25519.pub</mark></blockquote>
 
             <p> &emsp; Após isso se ocorrer tudo certo irá mostrar a chave publica abaixo do comando.</p>
+
+        </div>
+
+
+        <!-- meio 03 -->
+        <div>
+
+            <h3 id="Criando_github">Criando um repositorio no Github</h3>
+
+            <p>&emsp; Para criar um repositorio no Github siga o seguinte caminho:</p>
+            <p>&emsp; 1°) Na sua pagina inicial de login Siga os passos abaixo.</p>
+            &emsp;<img src="/Assets/Imagens/criando repositorio1.PNG" alt="" width="600px">
+
+            <p>&emsp; 2°) Agora configure o seu diretorio.</p>
+            &emsp;<img src="/Assets/Imagens/criando repositorio2.PNG" alt="" width="600px">
+            
 
         </div>
 
