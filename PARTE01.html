@@ -19,6 +19,7 @@
             <a href="#comandos"> Comandos simples </a>
             <a href="#Chaves_ssh"> Chaves SSH </a>
             <a href="#Criando_github">Criando um Novo Repositorio no Github</a>
+            <a href="estruturando_repositorio">Estruturando o Seu Repositorio</a>
         
         </div>
         
@@ -28,7 +29,7 @@
         <!-- começo01 -->
         <div> 
             <h3 id="Comandos">Comandos simples git e windows</h3>
-            <ul>
+            <ul> <h4>Controle de versões</h4>
                 <li><strong>Git Clone url:</strong> Clona um repositorio que esta na nuvem para a sua máquina</li>
                 <li><strong>Git Clone url xpto:</strong> Clona um repositorio que esta na nuvem para a sua máquina dentro que uma pasta chamada xpto especificada no final do comando</li>
                 <li><strong>Git Clone url --branch xxx --single-branch:</strong> Clona um repositorio que esta na nuvem para a sua máquina, clando apenas a branch especifica.</li>
@@ -37,10 +38,16 @@
                 <li><strong>Git Push:</strong> Envia para o repositorio na nuvem o commit que você fez.</li>
                 <li><strong>Git remote -v:</strong> Mostra se o diretorio é local ou remoto.</li>
                 <li><strong>Git remote add origin xx(url)xx:</strong>Vincula seu diretorio local ao remoto.</li>
+                <li><strong>Git status:</strong>Mostra os Staatus do commits que ainda não foram efetuados os pushs.</li>
+                <li><strong>echo exemplo/ > .gitignore:</strong> A pasta ou arquivo mencionado antes do sinal de maior que será ignorado pelo commit.</li>
+                <li><strong>echo > .gitignore</strong>: Se tiver algo no arquivo git ignore, depois desse comando ele ficara vazio.</li>
+                <li><strong>.gitkeep:</strong> Esse não se trata de um comanco mas sim de um arquivo onde o git reconhece um diretorio vazio para os seus commits, pois caso contrario o diretorio vazio será ignorado pelo commit do git.</li>
+                <li><strong>git log: </strong>Mostras os commits efetuados</li>
+                <li><strong>git init:</strong> quando setado dentro do uma pasta esse comando inicializa um repositorio com a pasta em questão</li>
                 <br><br>
 
 
-                <li><strong>git init</strong> quando setado dentro do uma pasta esse comando inicializa um repositorio com a pasta em questão</li>
+                <h4>Configurações</h4>
                 <li><strong>git config --global user.name "xxxxx":</strong> Aqui setamos o username do git que iremos usar mesmo username do github</li>
                 <li><strong>git config --global user.email xxxxx:</strong> Aqui igual ao username tem que ser o mesmo email que usamos no github</li>
                 <li><strong>git config user.name: </strong> Aqui verificamos o user que esta configurado no global</li>
@@ -50,23 +57,20 @@
                 <li><strong>git config --global credential.helper cache:</strong>No proximo clone que você realizar de um repositorio, o git salvara temporariamente a sua credencial login e senha</li>
                 <li><strong>git config --global credential.helper</strong> Mostra qual o tipo de aramazenamento esta sendo usado (cache ou store) </li>
                 <blockquote> Em casos onde o codigo acima mostre como store e você queira mudar pra cache basta usar o codigo do cache(git config --global credential.helper cache)</blockquote>
-                <br><br>
-
-
-
                 <li><strong>git config --global --show-origin credential.helper:</strong> Este comando mostra o caminho da máquina onde esta salvo o arquivo de senha utilizado pelo git.</li>
                 <li><strong> cat .gitconfig:</strong> Basicamente mostra as configurações do seu git como username, email, helper(credential)</li>
                 <li><strong>cat .git-credentials</strong> Pega o arquivo se senha e login do helper e mostra o login e senha( no caso token )</li>
                 <br><br>
 
 
-
+                <h4>Comandos Windows</h4>
                 <li><strong>Ctrl + L :</strong> Limpar todo o terminal</li>
                 <li><strong>Ctrl + 🔼:</strong> Copia o ultimo comando digitado acima.</li>
                 <li><strong>mkdir xxxx:</strong> Cria uma pasta no do diretorio em que é setado.</li>
                 <li><strong>cd xxxxx/:</strong> o cd é usado pra navegação o xxx/ basta substituir pelo caminho da pasta desejada.</li>
                 <li><strong>ls:</strong> Lista os arquivos ou pastas dentro de um diretorio</li>
                 <li><strong>cd .. : </strong> este comando volta uma pasta.</li>
+                <li><strong>touch exemplo.txt:</strong> Esse comando touch cria um arquivo, no camando exemplo ele cria um arquivo chamado exemplo com a extensão .TXT.</li>
             </ul> 
 
         </div>
@@ -129,6 +133,41 @@
             
 
         </div>
+
+
+
+        <!-- meio 04 -->
+        <div>
+
+            <h3 id="estruturando_repositorio">Estruturando_repositorio</h3>
+
+            <p>&emsp; Sempre que criar um repositorio é aconselhavel que você sempre coloque um reademe.md, esse arquivo é basicamente um reademe.txt mais robusto, onde podemos colocar linguagem de marcação simples, de uma forma sucinta é como se o TXT tivesse um filho com o antecessor do HTML. Segue alguns sites onde você pode estar editando esses arquivos:</p>
+            <ul class="enderecos">
+                <a href="https://www.readme.so">Readme.so</a>
+                <a href="https://pandao.github.io/editor.md/en.html">Editora.md</a>
+                <a href="http://markdown.pioul.fr/">Minimalist Online</a>
+            </ul>
+            
+            <p>&emsp; Agora vamos simular um commit desse arquvivo reademe:</p>
+            <p>&emsp;<strong>1°)-</strong>Vamos usar o comando git add para adiconar esse arquivo no commit; <br> <br>
+                 &emsp; <mark>git add reame.md</mark></p>
+
+            <p>&emsp;<strong>2°)-</strong>depois vamos usar o git status para analisar o status desse arquivo. <br><br>
+                &emsp; <mark>git status</mark></p>
+
+            <p>&emsp;<strong>3°)-</strong>Agora vamos commitar essa modificação: <br><br>
+                &emsp; <mark>git commit -m"mensagem Inicial" </mark></p>
+
+            <p>&emsp;<strong>4°)- </strong> depois disso feito so efetuar o push com o comando: <br><br>
+                &emsp; <mark>git push</mark></p>
+
+            <p>&emsp;Digamos que em algum repositorio possua algum arquivo ou pasta que não devem ser comitados então voce deve usar o comando git ignore. <br><br>
+                &emsp; <mark> echo exemplo/ >.gitignore</mark> (caso seja uma pasta.) | <mark> echo exemplo.txt >.gitignore</mark> (caso seja um arquivo)
+            </p>
+          
+
+        </div>
+
 
 
 
